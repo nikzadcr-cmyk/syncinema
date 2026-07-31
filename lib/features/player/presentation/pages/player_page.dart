@@ -60,7 +60,7 @@ class _PlayerPageState extends ConsumerState<PlayerPage> {
 
   Future<void> _pickFile() async {
     try {
-      final result = await FilePicker.platform.pickFiles(
+      final result = await FilePicker.pickFiles(
         type: FileType.custom,
         allowedExtensions: ['mp4','mkv','mov','avi','webm','mp3','flac','aac','ogg','wav','m4a'],
         withData: false,
@@ -79,7 +79,7 @@ class _PlayerPageState extends ConsumerState<PlayerPage> {
 
   Future<void> _pickSubtitle() async {
     try {
-      final result = await FilePicker.platform.pickFiles(type: FileType.custom, allowedExtensions: ['srt','vtt','ass','ssa'], withData: false);
+      final result = await FilePicker.pickFiles(type: FileType.custom, allowedExtensions: ['srt','vtt','ass','ssa'], withData: false);
       if (result != null && result.files.single.path != null) {
         await ref.read(playerProvider.notifier).loadExternalSubtitle(result.files.single.path!);
       }

@@ -187,7 +187,7 @@ class _RoomPageState extends ConsumerState<RoomPage> {
                     children: [
                       _miniGlassBtn(Icons.copy_rounded, onTap: () {}),
                       const Gap(8),
-                      _miniGlassBtn(Icons.share_rounded, onTap: () => Share.share('Join my Syncinema room: ${widget.roomId} https://syncinema.app/join?roomId=${widget.roomId}')),
+                      _miniGlassBtn(Icons.share_rounded, onTap: () => SharePlus.instance.share(ShareParams(text: 'Join my Syncinema room: ${widget.roomId} https://syncinema.app/join?roomId=${widget.roomId}'))),
                     ],
                   ),
                 ],
