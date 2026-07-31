@@ -11,35 +11,34 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # Core
   flutter_localizations:
     sdk: flutter
   cupertino_icons: ^1.0.8
 
-  # State Management - Riverpod
+  # State - Riverpod (stable for 3.24)
   flutter_riverpod: ^2.6.1
   riverpod_annotation: ^2.6.1
   hooks_riverpod: ^2.6.1
   flutter_hooks: ^0.21.2
 
   # Navigation
-  go_router: ^15.1.2
+  go_router: ^14.8.1
 
-  # Immutable & Serialization
+  # Immutable
   freezed_annotation: ^2.4.4
   json_annotation: ^4.9.0
 
-  # Networking & Sync
+  # Network
   web_socket_channel: ^3.0.2
   dio: ^5.7.0
 
-  # Player - media_kit supports ALL formats requested
+  # Player - compatible with Flutter 3.24
   media_kit: ^1.1.11
-  media_kit_video: ^2.0.1
+  media_kit_video: ^1.2.5
   media_kit_libs_video: ^1.0.5
   file_picker: ^11.0.3
 
-  # UI/UX Premium
+  # UI Premium
   google_fonts: ^6.2.1
   flutter_animate: ^4.5.0
   shimmer: ^3.0.0
@@ -49,17 +48,17 @@ dependencies:
   animations: ^2.0.11
   blur: ^4.0.0
 
-  # QR & Sharing
+  # QR & Share - compatible versions
   qr_flutter: ^4.1.0
   mobile_scanner: ^6.0.7
-  share_plus: ^12.0.2
+  share_plus: ^10.1.4
 
-  # Device & Storage
+  # Device & Storage - compatible with 3.24
   shared_preferences: ^2.3.3
   path_provider: ^2.1.5
   device_info_plus: ^11.1.2
-  permission_handler: ^12.0.3
-  package_info_plus: ^9.0.1
+  permission_handler: ^11.3.1
+  package_info_plus: ^8.0.2
   crypto: ^3.0.6
 
   # Utils
@@ -67,7 +66,7 @@ dependencies:
   intl: ^0.19.0
   collection: ^1.18.0
   equatable: ^2.0.7
-  connectivity_plus: ^7.3.1
+  connectivity_plus: ^6.0.5
   wakelock_plus: ^1.2.8
   screen_brightness: ^2.1.6
   volume_controller: ^3.2.1
@@ -80,7 +79,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^4.0.0
 
   build_runner: ^2.4.13
   freezed: ^2.5.7
@@ -99,12 +98,3 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/animations/
-
-  # fonts:
-  #  - family: Vazirmatn
-  #    fonts:
-  #      - asset: assets/fonts/Vazirmatn-Regular.ttf
-  #      - asset: assets/fonts/Vazirmatn-Medium.ttf
-  #        weight: 500
-  #      - asset: assets/fonts/Vazirmatn-Bold.ttf
-  #        weight: 700
