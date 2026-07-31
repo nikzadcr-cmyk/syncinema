@@ -1,16 +1,18 @@
 class ApiConstants {
-  // Replace with your deployed worker URL after deploy
-  static const String prodWsBase = 'wss://syncinema.your-subdomain.workers.dev';
+  // Deployed backend URL
+  static const String prodWsBase = 'wss://syncinema-backend.amirhosin-torkk.workers.dev';
+  static const String prodHttpBase = 'https://syncinema-backend.amirhosin-torkk.workers.dev';
   static const String localWsBase = 'ws://localhost:8787';
   
-  // Current env - switch to prod after deployment
+  // Current env - prod deployed
   static const String wsBaseUrl = prodWsBase;
+  static const String httpBaseUrl = prodHttpBase;
   
   static const String roomEndpoint = '/room';
   static const String healthEndpoint = '/health';
   
   static String roomWsUrl(String roomId) => '$wsBaseUrl/room/$roomId/websocket';
-  static String roomHttpUrl(String roomId) => '$wsBaseUrl/room/$roomId';
+  static String roomHttpUrl(String roomId) => '$httpBaseUrl/room/$roomId';
   
   static const Map<String, String> headers = {
     'Content-Type': 'application/json',
@@ -28,4 +30,7 @@ class EnvConfig {
   static String get wsBase => env == AppEnvironment.dev 
       ? ApiConstants.localWsBase 
       : ApiConstants.prodWsBase;
+  static String get httpBase => env == AppEnvironment.dev
+      ? 'http://localhost:8787'
+      : ApiConstants.prodHttpBase;
 }
