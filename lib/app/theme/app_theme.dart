@@ -13,12 +13,10 @@ class AppTheme {
         primary: AppColors.primary,
         secondary: AppColors.secondary,
         tertiary: AppColors.accentPink,
-        background: AppColors.backgroundDark,
         surface: AppColors.surfaceDark,
         error: AppColors.error,
         onPrimary: Colors.white,
         onSecondary: Colors.black,
-        onBackground: Colors.white,
         onSurface: Colors.white,
       ),
       textTheme: AppTypography.darkTextTheme,
@@ -29,7 +27,7 @@ class AppTheme {
         systemOverlayStyle: SystemUiOverlayStyle.light,
         centerTitle: false,
       ),
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         color: AppColors.cardDark,
         elevation: 0,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
@@ -41,7 +39,7 @@ class AppTheme {
           borderRadius: BorderRadius.vertical(top: Radius.circular(28)),
         ),
       ),
-      dialogTheme: DialogTheme(
+      dialogTheme: DialogThemeData(
         backgroundColor: AppColors.surfaceDark2,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
         titleTextStyle: AppTypography.darkTextTheme.titleLarge,
@@ -79,9 +77,6 @@ class AppTheme {
           textStyle: AppTypography.darkTextTheme.labelLarge,
         ),
       ),
-      extensions: const [
-        // Custom extensions can be added here
-      ],
     );
   }
 
@@ -93,14 +88,12 @@ class AppTheme {
       colorScheme: const ColorScheme.light(
         primary: AppColors.primary,
         secondary: AppColors.secondaryDark,
-        background: AppColors.backgroundLight,
         surface: AppColors.surfaceLight,
       ),
       textTheme: AppTypography.lightTextTheme,
     );
   }
 
-  // Glassmorphism decoration helpers
   static BoxDecoration glassDecoration({double radius = 20, double blur = 20}) {
     return BoxDecoration(
       color: AppColors.glassDark,
