@@ -15,30 +15,24 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
 
-  # State - Riverpod (stable for 3.24)
   flutter_riverpod: ^2.6.1
   riverpod_annotation: ^2.6.1
   hooks_riverpod: ^2.6.1
   flutter_hooks: ^0.21.2
 
-  # Navigation
   go_router: ^14.8.1
 
-  # Immutable
   freezed_annotation: ^2.4.4
   json_annotation: ^4.9.0
 
-  # Network
   web_socket_channel: ^3.0.2
   dio: ^5.7.0
 
-  # Player - compatible with Flutter 3.24
   media_kit: ^1.1.11
   media_kit_video: ^1.2.5
   media_kit_libs_video: ^1.0.5
-  file_picker: ^11.0.3
+  file_picker: ^10.1.9
 
-  # UI Premium
   google_fonts: ^6.2.1
   flutter_animate: ^4.5.0
   shimmer: ^3.0.0
@@ -48,12 +42,10 @@ dependencies:
   animations: ^2.0.11
   blur: ^4.0.0
 
-  # QR & Share - compatible versions
   qr_flutter: ^4.1.0
   mobile_scanner: ^6.0.7
   share_plus: ^10.1.4
 
-  # Device & Storage - compatible with 3.24
   shared_preferences: ^2.3.3
   path_provider: ^2.1.5
   device_info_plus: ^11.1.2
@@ -61,7 +53,6 @@ dependencies:
   package_info_plus: ^8.0.2
   crypto: ^3.0.6
 
-  # Utils
   uuid: ^4.5.1
   intl: ^0.19.0
   collection: ^1.18.0
@@ -71,7 +62,6 @@ dependencies:
   screen_brightness: ^2.1.6
   volume_controller: ^3.2.1
 
-  # Functional
   dartz: ^0.10.1
   get_it: ^8.0.3
   injectable: ^2.5.0

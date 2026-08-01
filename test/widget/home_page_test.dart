@@ -22,6 +22,16 @@ void main() {
     );
     await tester.pump();
 
-    expect(find.textContaining('همزمان'), findsOneWidget);
+    expect(find.textContaining('همزمان'), findsWidgets);
+    expect(find.textContaining('تماشا'), findsWidgets);
+  });
+
+  testWidgets('HomePage has Syncinema branding', (tester) async {
+    await tester.pumpWidget(
+      const ProviderScope(child: MaterialApp(home: HomePage())),
+    );
+    await tester.pump();
+
+    expect(find.text('Syncinema'), findsOneWidget);
   });
 }
