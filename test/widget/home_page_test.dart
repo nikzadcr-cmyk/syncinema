@@ -10,7 +10,9 @@ void main() {
         child: MaterialApp(home: HomePage()),
       ),
     );
-    await tester.pump();
+    // Let animations complete to avoid timersPending
+    await tester.pump(const Duration(milliseconds: 500));
+    await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
     expect(find.text('ساخت اتاق'), findsOneWidget);
     expect(find.text('ورود به اتاق'), findsOneWidget);
@@ -20,7 +22,8 @@ void main() {
     await tester.pumpWidget(
       const ProviderScope(child: MaterialApp(home: HomePage())),
     );
-    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+    await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
     expect(find.textContaining('همزمان'), findsWidgets);
     expect(find.textContaining('تماشا'), findsWidgets);
@@ -30,7 +33,8 @@ void main() {
     await tester.pumpWidget(
       const ProviderScope(child: MaterialApp(home: HomePage())),
     );
-    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 500));
+    await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
     expect(find.text('Syncinema'), findsOneWidget);
   });
