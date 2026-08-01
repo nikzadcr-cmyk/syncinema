@@ -19,18 +19,15 @@ class HomePage extends ConsumerStatefulWidget {
   ConsumerState<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends ConsumerState<HomePage> with TickerProviderStateMixin {
-  late AnimationController _bgController;
+class _HomePageState extends ConsumerState<HomePage> {
 
   @override
   void initState() {
     super.initState();
-    _bgController = AnimationController(vsync: this, duration: const Duration(seconds: 10))..repeat();
   }
 
   @override
   void dispose() {
-    _bgController.dispose();
     super.dispose();
   }
 
